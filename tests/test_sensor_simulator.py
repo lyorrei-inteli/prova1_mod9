@@ -74,7 +74,7 @@ def test_refrigerator_message_reception(mqtt_client):
     )
 
 
-def sensor_message_alert_check(message_handler, temperature):
+def sensor_message_alert_check(message_handler, temperature, alert_message):
     printMessage = message_handler(
         {
             "id": 1,
@@ -83,17 +83,19 @@ def sensor_message_alert_check(message_handler, temperature):
             "timestamp": str(time.time()),
         }
     )
-    assert "ALERTA" in printMessage, "Mensagem de alerta não foi gerada."
+    assert alert_message in printMessage, "Mensagem de alerta incorreta."
 
     received_messages.clear()
 
 
 def test_freezer_message_alert():
-    sensor_message_alert_check(freezer_sensor_handler, -35)
+    sensor_message_alert_check(freezer_sensor_handler, -35, "ALERTA: Temperatura BAIXA")
+    sensor_message_alert_check(freezer_sensor_handler, -10, "ALERTA: Temperatura ALTA")
 
 
 def test_refrigerator_message_alert():
-    sensor_message_alert_check(refrigerator_sensor_handler, 1)
+    sensor_message_alert_check(refrigerator_sensor_handler, 1, "ALERTA: Temperatura BAIXA")
+    sensor_message_alert_check(refrigerator_sensor_handler, 12, "ALERTA: Temperatura ALTA")
 
 
 def is_valid_json(myjson):
