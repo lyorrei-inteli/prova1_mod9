@@ -41,6 +41,10 @@ pytest tests/
 ![image](https://github.com/lyorrei-inteli/prova1_mod9/assets/99191948/9b49b84a-49e8-4e9d-84a3-01552ffa4520)
 
 
+### Sistema completo
+https://github.com/lyorrei-inteli/prova1_mod9/assets/99191948/48037c7b-13c2-4bd3-9c54-c60169d64763
+
+
 ## Estrutura do Projeto
 
 - `publisher.py`: Contém o código do publicador que envia dados simulados dos sensores para um Broker MQTT.
