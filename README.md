@@ -44,7 +44,7 @@ pytest tests/
 ## Estrutura do Projeto
 
 - `publisher.py`: Contém o código do publicador que envia dados simulados dos sensores para um Broker MQTT.
-- `subscriber.py`: Contém o código do assinante que escuta e armazena as mensagens no MongoDB.
+- `subscriber.py`: Contém o código do assinante que escuta e printa as mensagens.
 - `sensor_simulator.py`: Simula dados dos sensores.
 - `tests/`: Pasta contendo os testes automatizados para o simulador.
   - `test_sensor_simulator.py`: Testes automatizados para validar as funcionalidades do simulador.
