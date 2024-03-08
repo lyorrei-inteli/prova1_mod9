@@ -1,4 +1,4 @@
-# Integração do simulador com Metabase
+# Simulador Prova 1 módulo 9
 
 Este repositório contém um simulador de dispositivos IoT para sensores de refrigeração e um conjunto de testes automatizados para validar o simulador. O simulador publica dados simulados de sensores de temperatura situados em freezers e outros em um refrigeradores. O subscriber printa as mensagens recebidas e valida se deve printar também um alerta de temperatura alta ou baixa.
 
@@ -30,6 +30,15 @@ Para executar os testes automatizados, use o seguinte comando:
 ```bash
 pytest tests/
 ```
+
+## Comprovação de funcionamento
+
+### Publisher e Subscriber
+<img width="1092" alt="image" src="https://github.com/lyorrei-inteli/prova1_mod9/assets/99191948/0f480567-06e1-4400-a191-c9dccc3f9872">
+
+### Testes
+![image](https://github.com/lyorrei-inteli/prova1_mod9/assets/99191948/9b49b84a-49e8-4e9d-84a3-01552ffa4520)
+
 
 ## Estrutura do Projeto
 
