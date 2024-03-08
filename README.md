@@ -52,3 +52,33 @@ https://github.com/lyorrei-inteli/prova1_mod9/assets/99191948/48037c7b-13c2-4bd3
 - `sensor_simulator.py`: Simula dados dos sensores.
 - `tests/`: Pasta contendo os testes automatizados para o simulador.
   - `test_sensor_simulator.py`: Testes automatizados para validar as funcionalidades do simulador.
+
+## Testes
+
+### Testa se o publisher consegue enviar mensagens e o subscriber consegue recebê-las. 
+```python
+
+  def test_freezer_message_reception(mqtt_client):
+    message_reception_check(mqtt_client, FreezerSensorSimulator, freezer_topic)
+
+
+  def test_refrigerator_message_reception(mqtt_client):
+    message_reception_check(
+        mqtt_client, RefrigeratorSensorSimulator, refrigerator_topic
+    )
+
+```
+
+### Testa se o subscriber consegue identificar quando a temperatura está alta ou baixa e printar um alerta.
+```python
+
+  def test_freezer_message_alert():
+      sensor_message_alert_check(freezer_sensor_handler, -35, "ALERTA: Temperatura BAIXA")
+      sensor_message_alert_check(freezer_sensor_handler, -10, "ALERTA: Temperatura ALTA")
+
+
+  def test_refrigerator_message_alert():
+      sensor_message_alert_check(refrigerator_sensor_handler, 1, "ALERTA: Temperatura BAIXA")
+      sensor_message_alert_check(refrigerator_sensor_handler, 12, "ALERTA: Temperatura ALTA")
+
+``` 
