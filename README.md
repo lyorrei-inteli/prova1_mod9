@@ -34,7 +34,8 @@ pytest tests/
 ## Comprovação de funcionamento
 
 ### Publisher e Subscriber
-<img width="1092" alt="image" src="https://github.com/lyorrei-inteli/prova1_mod9/assets/99191948/0f480567-06e1-4400-a191-c9dccc3f9872">
+![image](https://github.com/lyorrei-inteli/prova1_mod9/assets/99191948/07db5544-58a3-4a5b-a5ef-189d8f06f9f7)
+
 
 ### Testes
 ![image](https://github.com/lyorrei-inteli/prova1_mod9/assets/99191948/9b49b84a-49e8-4e9d-84a3-01552ffa4520)
